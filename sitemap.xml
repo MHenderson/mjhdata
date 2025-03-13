@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://MHenderson.github.io/mjhdata/posts/welcome/index.html</loc>
-    <lastmod>2025-03-13T10:42:54.166Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/about.html</loc>
-    <lastmod>2025-03-13T10:42:54.165Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/index.html</loc>
-    <lastmod>2025-03-13T10:42:54.165Z</lastmod>
+    <loc>https://MHenderson.github.io/mjhdata/posts/2023-05-16-tidy-tuesday-tornadoes/index.html</loc>
+    <lastmod>2025-03-13T14:08:25.803Z</lastmod>
   </url>
   <url>
     <loc>https://MHenderson.github.io/mjhdata/posts/post-with-code/index.html</loc>
-    <lastmod>2025-03-13T10:42:54.166Z</lastmod>
+    <lastmod>2025-03-13T14:08:25.806Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MHenderson.github.io/mjhdata/index.html</loc>
+    <lastmod>2025-03-13T14:08:25.803Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MHenderson.github.io/mjhdata/about.html</loc>
+    <lastmod>2025-03-13T14:08:25.802Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MHenderson.github.io/mjhdata/posts/welcome/index.html</loc>
+    <lastmod>2025-03-13T14:08:25.806Z</lastmod>
   </url>
 </urlset>
