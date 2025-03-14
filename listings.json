@@ -2,8 +2,6 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html",
       "/posts/2023-05-16-tidy-tuesday-tornadoes/index.html"
     ]
   }
