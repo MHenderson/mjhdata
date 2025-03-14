@@ -2,8 +2,7 @@
 title: Extracting Text from Images with Google Vision API and R
 author: Matthew Henderson
 date: '2021-11-04'
-image: 'featured.jpg'
-slug: []
+image: 'featured.png'
 categories:
   - ocr
 tags:
@@ -13,9 +12,6 @@ tags:
   - cloud-computing
 subtitle: ''
 excerpt: 'Using Vision API and R to extract text from images of handwriting.'
-draft: no
-series: ~
-layout: single
 references:
 - id: urbanekBase64encToolsBase642015
   author:
@@ -266,6 +262,8 @@ extracting text from these
 handwritten pages
 to the
 [text version of the novel from Project Gutenberg.](https://www.gutenberg.org/ebooks/4748)
+
+![](featured.png)
 
 ## Creating document text detection requests
 
@@ -1175,3 +1173,4 @@ Then run
 The output will be your access token followed by lots of dots.
 
 # References
+
