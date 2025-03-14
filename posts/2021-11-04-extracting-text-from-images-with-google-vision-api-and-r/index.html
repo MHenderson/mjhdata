@@ -214,6 +214,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Extracting handwriting from a single image</h1>
 <p>In this section and subsequent sections I will make use of several images of my own handwriting.</p>
 <p>So you can compare the output of Vision API against a known text I have handwritten several pages of <a href="https://en.wikipedia.org/wiki/James_Oliver_Curwood">James Oliver Curwood</a>’s novel <em>Baree, Son of Kazan</em>. Later I’ll show you how to compare the results of extracting text from these handwritten pages to the <a href="https://www.gutenberg.org/ebooks/4748">text version of the novel from Project Gutenberg.</a></p>
+<p><img src="featured.png" class="img-fluid"></p>
 <section id="creating-document-text-detection-requests" class="level2">
 <h2 class="anchored" data-anchor-id="creating-document-text-detection-requests">Creating document text detection requests</h2>
 <p>To use Vision API to extract text from images we must send images to the URL <code>https://vision.googleapis.com/v1/images:annotate</code> in JSON format. Putting images into JSON means encoding them as text. Vision API requires images encoded as text to use the Base64 encoding scheme. (see https://en.wikipedia.org/wiki/Base64 for more details).</p>
