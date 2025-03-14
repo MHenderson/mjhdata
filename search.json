@@ -7,11 +7,18 @@
     "text": "This week Tidy Tuesday was all about tornadoes. Data came from NOAA’s National Weather Service Storm Prediction Center Severe Weather Maps, Graphics, and Data Page.\nTo draw the maps below I used the {{sf}} package in R. I used geom_sf to plot both the Kentucky state boundary using data from the {{tigris}} package as well as tornado paths from the NOAA data.\nThe first version I created was too clutterred and hard to interpret. So I tried again, introducing a decade variable so that I could plot different tornadoes from different decades on different maps with geom_facet.\n\n\n\nThis image shows a grid of maps of the US state of Kentucky. Each map represents a different decade and is filled with coloured arrows showing the paths of tornadoes in that decade. The arrows are coloured according to the intensity of the tornado. The plot shows that during the 1980s there were relatively few tornadoes in Kentucky while in the 1970s there were a large number of very intense torndoes. In recent decades the number of tornadoes appears to have increased but there are fewer of high intensity.\n\n\nThe final version of this plot originally included county boundaries. But I decided to remove them as they interfered with the state boundary and made the plot too messy when combined with lots of arrows. I wish I could have found a way to add the county boundaries in a more subtle way so they could be seen but without affecting the overall simplicity of the final plot.\nAlthough the final plot arguably lacks a compelling story I think it does have the property of allowing the viewer to find something interesting by exploring the plot.\nFor example, after looking at the plot for a while it became clear to me that during the 1970s there were a large number of powerful tornadoes in Kentucky, particularly in the central region of the state and especially when compared to the 1980s. In more recent decades it seems that the western part of the state has experienced most tornado activity.\nSpending some time on titles, lables and headings improved the plot quite a bit. I took a little bit of extra care labelling the 1950s and 2020s facets properly as well as finding space to describe the change of scale in 2007 from F to EF. I used one my favourite themes from the {{hrbrthemes}} package which always improves the overall look of the final result.\nThis was the first time I used Github Codespaces for an entire project (albeit a very small project). All of the work I did on this plot was done on Codespaces with the rocker/geospatial Docker container.\nCombining {{renv}} and {{targets}} made things especially easy. Resuming work inside a fresh Codespace is just a matter of calling renv::restore() followed by targets::tar_make(). Package installations are fast thanks to RStudio Package Manager."
   },
   {
+    "objectID": "posts/2023-05-09-tidy-tuesday-childcare-costs/index.html",
+    "href": "posts/2023-05-09-tidy-tuesday-childcare-costs/index.html",
+    "title": "Tidy Tuesday: Childcare Costs",
+    "section": "",
+    "text": "The plot below is my attempt to recreate in {{ggplot2}} one of the plots at https://www.dol.gov/agencies/wb/topics/childcare/price-by-age-care-setting. Namely the plot that greets you when you follow the above link, with the price selector dropdown at the default value of “Infant center-based”.\n\n\n\nA chloropleth map showing the median cost of childcare in the USA between 2016 and 2018. The coloured regions of the map correspond to counties.\n\n\nI faced one or two difficulties in trying to recreate the original plot. One issue I didn’t resolve was how to adjust the prices for CPI-U (the Consumer Price Index for All Urban Consumers). It was easy enough to figure out what calculation needed to be done but I couldn’t find a source of CPI-U for childcare costs in the USA between 2016 and 2018.\nAnother issue I failed to resolve was how to add maps of Alaska and Hawaii to the plot of the rest of the USA.\nThe code behind my plot is here: https://github.com/MHenderson/childcare-costs"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "mjhdata",
     "section": "",
-    "text": "Tidy Tuesday: Tornadoes\n\n\n\n\n\n\ndataviz\n\n\n\n\n\n\n\n\n\nMay 16, 2023\n\n\nMatthew Henderson\n\n\n\n\n\n\nNo matching items"
+    "text": "Tidy Tuesday: Tornadoes\n\n\n\n\n\n\ndataviz\n\n\n\n\n\n\n\n\n\nMay 16, 2023\n\n\nMatthew Henderson\n\n\n\n\n\n\n\n\n\n\n\n\nTidy Tuesday: Childcare Costs\n\n\n\n\n\n\ndataviz\n\n\n\n\n\n\n\n\n\nMay 9, 2023\n\n\nMatthew Henderson\n\n\n\n\n\n\n\n\n\n\n\n\nGenerating Examples of Maximal Room Squares in R\n\n\n\n\n\n\ncombinatorics\n\n\n\n\n\n\n\n\n\nMay 4, 2023\n\n\nMatthew Henderson\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -19,5 +26,26 @@
     "title": "About",
     "section": "",
     "text": "About this blog."
+  },
+  {
+    "objectID": "posts/2023-05-04-generating-examples-of-maximal-room-squares-in-r/index.html",
+    "href": "posts/2023-05-04-generating-examples-of-maximal-room-squares-in-r/index.html",
+    "title": "Generating Examples of Maximal Room Squares in R",
+    "section": "",
+    "text": "A Room square of order \\(n\\) and side \\(n − 1\\) on an \\(n\\)‐element set \\(S\\) is an \\(n - 1 \\times n - 1\\) array filled with \\(n\\) different symbols in such a way that:\nA partial Room square of order \\(n\\) and side \\(n − 1\\) on an \\(n\\)‐element set \\(S\\) is an \\(n - 1 \\times n - 1\\) array satisfying property (1) above, and also\nA partial Room square is maximal if no further pair of elements of \\(S\\) can be placed into any unoccupied cell of \\(F\\) without violating the conditions (1), (4), (5)."
+  },
+  {
+    "objectID": "posts/2023-05-04-generating-examples-of-maximal-room-squares-in-r/index.html#greedy1",
+    "href": "posts/2023-05-04-generating-examples-of-maximal-room-squares-in-r/index.html#greedy1",
+    "title": "Generating Examples of Maximal Room Squares in R",
+    "section": "greedy1",
+    "text": "greedy1\nThe algorithm greedy1 visits each cell in a predetermined order and places the first available pair of symbols into the cell, provided that doing so does not violate the conditions of creating a partial Room square.\nR &lt;- greedy1(6)\nplot_room_square_labs(R)\n\nIn this plot, the colors indicate the sequence in which the cells were filled. Specifically, lighter colors represent cells that were filled earlier in the process, while darker colors represent cells that were filled later.\nis_maximal_proom(R)\n#&gt; [1] TRUE\nHere are a few more examples of maximal partial Room squares created by greedy1."
+  },
+  {
+    "objectID": "posts/2023-05-04-generating-examples-of-maximal-room-squares-in-r/index.html#greedy2",
+    "href": "posts/2023-05-04-generating-examples-of-maximal-room-squares-in-r/index.html#greedy2",
+    "title": "Generating Examples of Maximal Room Squares in R",
+    "section": "greedy2",
+    "text": "greedy2\nThe algorithm greedy2 iterates through all pairs of symbols in a predetermined order and places the next available pair into the first empty cell, provided that doing so does not violate the conditions of creating a partial Room square.\nR &lt;- greedy2(6)\nplot_room_square_labs(R)\n\nis_maximal_proom(R)\n#&gt; [1] TRUE\nHere are a few more examples of maximal partial Room squares created by greedy2."
   }
 ]

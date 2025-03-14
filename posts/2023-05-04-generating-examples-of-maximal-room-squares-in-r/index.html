@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Matthew Henderson">
+<meta name="dcterms.date" content="2023-05-04">
 
-<title>mjhdata</title>
+<title>Generating Examples of Maximal Room Squares in R – mjhdata</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +22,79 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8647a4a42273f773479d27c00df3f9ed.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-8647a4a42273f773479d27c00df3f9ed.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,35 +122,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -128,17 +153,17 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">mjhdata</span>
     </a>
   </div>
@@ -149,7 +174,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -172,143 +197,105 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">mjhdata</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Generating Examples of Maximal Room Squares in R</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">combinatorics</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Matthew Henderson </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">May 4, 2023</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Y29tYmluYXRvcmljcw==">combinatorics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGF0YXZpeg==">dataviz <span class="quarto-category-count">(2)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>A <strong>Room square</strong> of order <span class="math inline">\(n\)</span> and side <span class="math inline">\(n − 1\)</span> on an <span class="math inline">\(n\)</span>‐element set <span class="math inline">\(S\)</span> is an <span class="math inline">\(n - 1 \times n - 1\)</span> array filled with <span class="math inline">\(n\)</span> different symbols in such a way that:</p>
+<ol type="1">
+<li>Each cell of the array is either empty or contains an unordered pair from the set of symbols</li>
+<li>Each symbol occurs exactly once in each row and column of the array</li>
+<li>Every unordered pair of symbols occurs in exactly one cell of the array.</li>
+</ol>
+<p>A <strong>partial Room square</strong> of order <span class="math inline">\(n\)</span> and side <span class="math inline">\(n − 1\)</span> on an <span class="math inline">\(n\)</span>‐element set <span class="math inline">\(S\)</span> is an <span class="math inline">\(n - 1 \times n - 1\)</span> array satisfying property (1) above, and also</p>
+<ol start="4" type="1">
+<li>every symbol of <span class="math inline">\(S\)</span> occurs at most once in each row and at most once in each column of the array</li>
+<li>every unordered pair of symbols of <span class="math inline">\(S\)</span> occurs in at most one cell of the array.</li>
+</ol>
+<p>A partial Room square is <strong>maximal</strong> if no further pair of elements of <span class="math inline">\(S\)</span> can be placed into any unoccupied cell of <span class="math inline">\(F\)</span> without violating the conditions (1), (4), (5).</p>
+<section id="greedy-maximal-room-squares" class="level1">
+<h1>Greedy maximal Room squares</h1>
+<p>There are at least two deterministic methods for generating a maximal partial Room square, as described in <span class="citation" data-cites="meszkaMaximalPartialRoom2021">Meszka and Rosa (<a href="#ref-meszkaMaximalPartialRoom2021" role="doc-biblioref">2021</a>)</span>.</p>
+<p>The first method involves iterating through the cells in a specific order and placing the next available pair of elements into the next empty cell, ensuring that the pair satisfies the conditions of being a partial Room square. This process is known as <code>greedy1</code>.</p>
+<p>The second method involves iterating through the set of all unordered pairs and placing the next available pair into the first cell that satisfies the conditions of being a partial Room square without violating any constraints. This process is known as <code>greedy2</code>.</p>
+<p>Both <code>greedy1</code> and <code>greedy2</code> have been implemented in R and are available at <a href="https://github.com/MHenderson/maximal-room-squares">the Github repository</a> (<span class="citation" data-cites="hendersonMHendersonMaximalroomsquares2023">Henderson (<a href="#ref-hendersonMHendersonMaximalroomsquares2023" role="doc-biblioref">2023</a>)</span>) accompanying this blog post.</p>
+<section id="greedy1" class="level2">
+<h2 class="anchored" data-anchor-id="greedy1">greedy1</h2>
+<p>The algorithm <code>greedy1</code> visits each cell in a predetermined order and places the first available pair of symbols into the cell, provided that doing so does not violate the conditions of creating a partial Room square.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>R <span class="ot">&lt;-</span> <span class="fu">greedy1</span>(<span class="dv">6</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_room_square_labs</span>(R)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><img src="greedy1_example_plot-1.png" class="img-fluid"></p>
+<p>In this plot, the colors indicate the sequence in which the cells were filled. Specifically, lighter colors represent cells that were filled earlier in the process, while darker colors represent cells that were filled later.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is_maximal_proom</span>(R)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here are a few more examples of maximal partial Room squares created by <code>greedy1</code>.</p>
+<p><img src="greedy1_examples_1-1.png" class="img-fluid"><!-- --></p>
+<p><img src="greedy1_examples_2-1.png" class="img-fluid"><!-- --></p>
+</section>
+<section id="greedy2" class="level2">
+<h2 class="anchored" data-anchor-id="greedy2">greedy2</h2>
+<p>The algorithm <code>greedy2</code> iterates through all pairs of symbols in a predetermined order and places the next available pair into the first empty cell, provided that doing so does not violate the conditions of creating a partial Room square.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>R <span class="ot">&lt;-</span> <span class="fu">greedy2</span>(<span class="dv">6</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_room_square_labs</span>(R)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><img src="greedy2_example_plot-1.png" class="img-fluid"></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is_maximal_proom</span>(R)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here are a few more examples of maximal partial Room squares created by <code>greedy2</code>.</p>
+<p><img src="greedy2_examples_1-1.png" class="img-fluid"></p>
+<p><img src="greedy2_examples_2-1.png" class="img-fluid"></p>
+</section>
+<section id="references" class="level2">
 
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="ZGF0YXZpeg==" data-listing-date-sort="1684195200000" data-listing-file-modified-sort="1741945414875" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="457">
-<div class="thumbnail">
-<p><a href="./posts/2023-05-16-tidy-tuesday-tornadoes/index.html" class="no-external"></a></p><a href="./posts/2023-05-16-tidy-tuesday-tornadoes/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/2023-05-16-tidy-tuesday-tornadoes/ky-tornadoes-plot.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/2023-05-16-tidy-tuesday-tornadoes/index.html" class="no-external"></a></p>
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-hendersonMHendersonMaximalroomsquares2023" class="csl-entry" role="listitem">
+Henderson, Matthew. 2023. <span>“MHenderson/Maximal-Room-Squares: 0.1.0.”</span> Zenodo. <a href="https://doi.org/10.5281/ZENODO.7895562">https://doi.org/10.5281/ZENODO.7895562</a>.
 </div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2023-05-16-tidy-tuesday-tornadoes/index.html" class="no-external">Tidy Tuesday: Tornadoes</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2023-05-16-tidy-tuesday-tornadoes/index.html" class="no-external"></a>
+<div id="ref-meszkaMaximalPartialRoom2021" class="csl-entry" role="listitem">
+Meszka, Mariusz, and Alexander Rosa. 2021. <span>“Maximal Partial Room Squares.”</span> <em>Journal of Combinatorial Designs</em> 29 (7): 482–501. <a href="https://doi.org/10.1002/jcd.21777">https://doi.org/10.1002/jcd.21777</a>.
 </div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YXZpeg=='); return false;">
-dataviz
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/2023-05-16-tidy-tuesday-tornadoes/index.html" class="no-external">This week Tidy Tuesday was all about tornadoes. Data came from NOAA’s National Weather Service Storm Prediction Center Severe Weather Maps, Graphics, and Data Page.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2023-05-16-tidy-tuesday-tornadoes/index.html" class="no-external">
-<div class="listing-date">
-May 16, 2023
-</div>
-<div class="listing-author">
-Matthew Henderson
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="ZGF0YXZpeg==" data-listing-date-sort="1683590400000" data-listing-file-modified-sort="1741945414867" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="155">
-<div class="thumbnail">
-<p><a href="./posts/2023-05-09-tidy-tuesday-childcare-costs/index.html" class="no-external"></a></p><a href="./posts/2023-05-09-tidy-tuesday-childcare-costs/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/2023-05-09-tidy-tuesday-childcare-costs/infant-center-based.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/2023-05-09-tidy-tuesday-childcare-costs/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2023-05-09-tidy-tuesday-childcare-costs/index.html" class="no-external">Tidy Tuesday: Childcare Costs</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2023-05-09-tidy-tuesday-childcare-costs/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YXZpeg=='); return false;">
-dataviz
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/2023-05-09-tidy-tuesday-childcare-costs/index.html" class="no-external">The plot below is my attempt to recreate in {{ggplot2}} one of the plots at https://www.dol.gov/agencies/wb/topics/childcare/price-by-age-care-setting. Namely the plot that…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2023-05-09-tidy-tuesday-childcare-costs/index.html" class="no-external">
-<div class="listing-date">
-May 9, 2023
-</div>
-<div class="listing-author">
-Matthew Henderson
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Y29tYmluYXRvcmljcw==" data-listing-date-sort="1683158400000" data-listing-file-modified-sort="1741945414866" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="438">
-<div class="thumbnail">
-<p><a href="./posts/2023-05-04-generating-examples-of-maximal-room-squares-in-r/index.html" class="no-external"></a></p><a href="./posts/2023-05-04-generating-examples-of-maximal-room-squares-in-r/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/2023-05-04-generating-examples-of-maximal-room-squares-in-r/greedy1_example_plot-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/2023-05-04-generating-examples-of-maximal-room-squares-in-r/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2023-05-04-generating-examples-of-maximal-room-squares-in-r/index.html" class="no-external">Generating Examples of Maximal Room Squares in R</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2023-05-04-generating-examples-of-maximal-room-squares-in-r/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Y29tYmluYXRvcmljcw=='); return false;">
-combinatorics
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/2023-05-04-generating-examples-of-maximal-room-squares-in-r/index.html" class="no-external">A <strong>Room square</strong> of order <span class="math inline">\(n\)</span> and side <span class="math inline">\(n − 1\)</span> on an <span class="math inline">\(n\)</span>‐element set <span class="math inline">\(S\)</span> is an <span class="math inline">\(n - 1 \times n - 1\)</span> array filled with <span class="math inline">\(n\)</span> different symbols in such a way that:</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2023-05-04-generating-examples-of-maximal-room-squares-in-r/index.html" class="no-external">
-<div class="listing-date">
-May 4, 2023
-</div>
-<div class="listing-author">
-Matthew Henderson
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

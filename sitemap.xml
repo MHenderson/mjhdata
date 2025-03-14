@@ -2,14 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://MHenderson.github.io/mjhdata/posts/2023-05-16-tidy-tuesday-tornadoes/index.html</loc>
-    <lastmod>2025-03-14T09:34:22.994Z</lastmod>
+    <lastmod>2025-03-14T09:43:34.875Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MHenderson.github.io/mjhdata/posts/2023-05-09-tidy-tuesday-childcare-costs/index.html</loc>
+    <lastmod>2025-03-14T09:43:34.867Z</lastmod>
   </url>
   <url>
     <loc>https://MHenderson.github.io/mjhdata/index.html</loc>
-    <lastmod>2025-03-14T09:34:22.994Z</lastmod>
+    <lastmod>2025-03-14T09:43:34.865Z</lastmod>
   </url>
   <url>
     <loc>https://MHenderson.github.io/mjhdata/about.html</loc>
-    <lastmod>2025-03-14T09:34:22.994Z</lastmod>
+    <lastmod>2025-03-14T09:43:34.865Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MHenderson.github.io/mjhdata/posts/2023-05-04-generating-examples-of-maximal-room-squares-in-r/index.html</loc>
+    <lastmod>2025-03-14T09:43:34.866Z</lastmod>
   </url>
 </urlset>
