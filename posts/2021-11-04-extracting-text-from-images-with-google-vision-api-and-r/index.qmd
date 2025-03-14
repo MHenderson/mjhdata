@@ -2,6 +2,7 @@
 title: Extracting Text from Images with Google Vision API and R
 author: Matthew Henderson
 date: '2021-11-04'
+image: 'featured.jpg'
 slug: []
 categories:
   - ocr
