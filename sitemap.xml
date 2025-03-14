@@ -2,22 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://MHenderson.github.io/mjhdata/posts/2023-05-16-tidy-tuesday-tornadoes/index.html</loc>
-    <lastmod>2025-03-14T09:43:34.875Z</lastmod>
+    <lastmod>2025-03-14T10:55:17.716Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MHenderson.github.io/mjhdata/posts/2021-05-05-tidy-tuesday-water-sources/index.html</loc>
+    <lastmod>2025-03-14T10:55:17.687Z</lastmod>
   </url>
   <url>
     <loc>https://MHenderson.github.io/mjhdata/posts/2023-05-09-tidy-tuesday-childcare-costs/index.html</loc>
-    <lastmod>2025-03-14T09:43:34.867Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/index.html</loc>
-    <lastmod>2025-03-14T09:43:34.865Z</lastmod>
+    <lastmod>2025-03-14T10:55:17.709Z</lastmod>
   </url>
   <url>
     <loc>https://MHenderson.github.io/mjhdata/about.html</loc>
-    <lastmod>2025-03-14T09:43:34.865Z</lastmod>
+    <lastmod>2025-03-14T10:55:17.686Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MHenderson.github.io/mjhdata/index.html</loc>
+    <lastmod>2025-03-14T10:55:17.686Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MHenderson.github.io/mjhdata/posts/2021-11-04-extracting-text-from-images-with-google-vision-api-and-r/index.html</loc>
+    <lastmod>2025-03-14T10:55:17.707Z</lastmod>
   </url>
   <url>
     <loc>https://MHenderson.github.io/mjhdata/posts/2023-05-04-generating-examples-of-maximal-room-squares-in-r/index.html</loc>
-    <lastmod>2025-03-14T09:43:34.866Z</lastmod>
+    <lastmod>2025-03-14T10:55:17.709Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MHenderson.github.io/mjhdata/posts/2021-05-11-tidy-tuesday-internet-access/index.html</loc>
+    <lastmod>2025-03-14T10:55:17.701Z</lastmod>
   </url>
 </urlset>
