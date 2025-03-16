@@ -1,0 +1,16 @@
+   351   2001  13748 posts/2014-08-08-colouring-small-graphs-update/index.qmd
+   280   1809  10972 posts/2014-08-15-colouring-small-regular-graphs/index.qmd
+   378   1878  12869 posts/2014-08-22-small-moore-graphs/index.qmd
+   186   1279   8306 posts/2014-08-29-chromatic-indices-of-small-graphs/index.qmd
+   248   1194   8437 posts/2014-09-12-more-on-moore-graphs/index.qmd
+   325   1878  11449 posts/2014-09-26-greedy-edge-colouring-of-small-graphs/index.qmd
+   237   1341   9513 posts/2014-10-17-euler-paths/index.qmd
+    55    226   1758 posts/2019-12-10-tidy-tuesday-replicating-plots-in-r/index.qmd
+   144    354   2643 posts/2019-12-17-tidy-tuesday-adoptable-dogs/index.qmd
+    46    137   1225 posts/2021-05-05-tidy-tuesday-water-sources/index.qmd
+   150    443   3475 posts/2021-05-11-tidy-tuesday-internet-access/index.qmd
+  1176   4346  28580 posts/2021-11-04-extracting-text-from-images-with-google-vision-api-and-r/index.qmd
+   151    742   5309 posts/2023-05-04-generating-examples-of-maximal-room-squares-in-r/index.qmd
+    29    234   1535 posts/2023-05-09-tidy-tuesday-childcare-costs/index.qmd
+    50    541   3346 posts/2023-05-16-tidy-tuesday-tornadoes/index.qmd
+  3806  18403 123165 total
