@@ -10,11 +10,7 @@ tags:
   - chromatic-number
   - graphviz
   - coreutils
-subtitle: ''
 excerpt: "Reproducing Royle's table of chromatic number distributions."
-draft: no
-series: ~
-layout: single
 references:
 - id: haggardComputingTuttePolynomials2010
   abstract: >-
