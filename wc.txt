@@ -1,3 +1,4 @@
+   174   1144   7594 posts/2014-07-18-a-chromatic-number-program/index.qmd
    271   1471  10127 posts/2014-07-25-colouring-small-graphs/index.qmd
    351   2001  13748 posts/2014-08-08-colouring-small-graphs-update/index.qmd
    280   1809  10972 posts/2014-08-15-colouring-small-regular-graphs/index.qmd
@@ -14,4 +15,4 @@
    151    742   5309 posts/2023-05-04-generating-examples-of-maximal-room-squares-in-r/index.qmd
     29    234   1535 posts/2023-05-09-tidy-tuesday-childcare-costs/index.qmd
     50    541   3346 posts/2023-05-16-tidy-tuesday-tornadoes/index.qmd
-  4077  19874 133292 total
+  4251  21018 140886 total
