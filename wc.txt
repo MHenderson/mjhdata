@@ -1,3 +1,4 @@
+   267   1558  10887 posts/2014-05-09-lombardi-drawings/index.qmd
    303   2128  13704 posts/2014-05-23-introduction-to-greedy-colouring/index.qmd
    170   1009   6921 posts/2014-05-30-drawing-coloured-queen-graphs/index.qmd
    228   1502  10030 posts/2014-06-06-processing-graph-streams/index.qmd
@@ -23,4 +24,4 @@
    151    742   5309 posts/2023-05-04-generating-examples-of-maximal-room-squares-in-r/index.qmd
     29    234   1535 posts/2023-05-09-tidy-tuesday-childcare-costs/index.qmd
     50    541   3346 posts/2023-05-16-tidy-tuesday-tornadoes/index.qmd
-  6056  31087 210515 total
+  6323  32645 221402 total
