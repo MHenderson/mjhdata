@@ -1,3 +1,4 @@
+   102    656   4868 posts/2014-04-25-plane-drawings-of-lobsters/index.qmd
    234   1223   8846 posts/2014-05-02-basic-graph-drawing/index.qmd
    267   1558  10887 posts/2014-05-09-lombardi-drawings/index.qmd
    303   2128  13704 posts/2014-05-23-introduction-to-greedy-colouring/index.qmd
@@ -25,4 +26,4 @@
    151    742   5309 posts/2023-05-04-generating-examples-of-maximal-room-squares-in-r/index.qmd
     29    234   1535 posts/2023-05-09-tidy-tuesday-childcare-costs/index.qmd
     50    541   3346 posts/2023-05-16-tidy-tuesday-tornadoes/index.qmd
-  6557  33868 230248 total
+  6659  34524 235116 total
