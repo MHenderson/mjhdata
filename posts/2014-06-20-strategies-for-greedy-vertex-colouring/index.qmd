@@ -2,7 +2,6 @@
 title: Strategies for Greedy Vertex Colouring
 author: Matthew Henderson
 date: '2014-06-20'
-image: 'featured.jpg'
 categories:
   - graph-theory
 tags:

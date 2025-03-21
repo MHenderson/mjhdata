@@ -2,7 +2,6 @@
 title: More on Moore Graphs
 author: Matthew Henderson
 date: '2014-09-12'
-image: 'featured.png'
 categories:
   - graph-theory
 tags:
