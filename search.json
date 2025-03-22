@@ -399,13 +399,6 @@
     "text": "Results\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\[n = 2\\]\n3\n4\n5\n6\n7\n8\n9\n\n\n\n\n\\[\\chi =  2\\]\n0\n1\n2\n1\n2\n1\n2\n1\n\n\n3\n0\n1\n4\n8\n26\n58\n162\n254\n\n\n4\n0\n0\n0\n10\n45\n193\n435\n538\n\n\n5\n0\n0\n0\n2\n21\n80\n187\n215\n\n\n6\n0\n0\n0\n0\n0\n18\n39\n59\n\n\n7\n0\n0\n0\n0\n0\n0\n9\n13\n\n\n8\n0\n0\n0\n0\n0\n0\n0\n4\n\n\n9\n0\n0\n0\n0\n0\n0\n0\n0\n\n\nTotal:\n0\n2\n6\n21\n94\n350\n834\n1084\n\n\n\n\n\n\nConnected Graphs\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\[n = 2\\]\n3\n4\n5\n6\n7\n8\n9\n\n\n\n\n\\[\\chi =  2\\]\n0\n1\n3\n5\n10\n15\n26\n37\n\n\n3\n0\n1\n5\n14\n46\n123\n350\n772\n\n\n4\n0\n0\n0\n10\n55\n258\n749\n1476\n\n\n5\n0\n0\n0\n2\n23\n104\n305\n568\n\n\n6\n0\n0\n0\n0\n0\n18\n57\n125\n\n\n7\n0\n0\n0\n0\n0\n0\n9\n22\n\n\n8\n0\n0\n0\n0\n0\n0\n0\n4\n\n\n9\n0\n0\n0\n0\n0\n0\n0\n0\n\n\nTotal:\n0\n2\n8\n31\n134\n518\n1496\n3004\n\n\n\n\n\n\nConnected Graphs"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this blog."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "mjhdata",
