@@ -2,7 +2,6 @@
 title: Processing Graph Streams
 author: Matthew Henderson
 date: '2014-06-06'
-image: 'featured.jpg'
 categories:
   - graph-theory
 tags:
