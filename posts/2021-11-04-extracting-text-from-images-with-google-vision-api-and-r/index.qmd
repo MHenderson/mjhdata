@@ -2,7 +2,6 @@
 title: Extracting Text from Images with Google Vision API and R
 author: Matthew Henderson
 date: '2021-11-04'
-image: 'featured.png'
 categories:
   - ocr
 tags:
@@ -10,8 +9,6 @@ tags:
   - gcp
   - apis
   - cloud-computing
-subtitle: ''
-excerpt: 'Using Vision API and R to extract text from images of handwriting.'
 references:
 - id: urbanekBase64encToolsBase642015
   author:

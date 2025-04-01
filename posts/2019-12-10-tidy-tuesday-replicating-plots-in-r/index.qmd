@@ -2,22 +2,10 @@
 title: 'Tidy Tuesday: Replicating Plots in R'
 author: Matthew Henderson
 date: '2019-12-10'
-description: "Week 50 of 2019."
-slug: [tidy-tuesday-replicating-plots-in-r]
 categories:
   - dataviz
 tags:
   - tidy-tuesday
-subtitle: ''
-excerpt: "Tidy Tuesday
-in week fifty of 2019
-was all about
-[this blog post](https://simplystatistics.org/2019/08/28/you-can-replicate-almost-any-plot-with-ggplot2/)
-by Rafael Irizarry
-on replicating plots in R."
-draft: false
-series: ~
-layout: single
 ---
 
 Tidy Tuesday
