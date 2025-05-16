@@ -1,119 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://MHenderson.github.io/mjhdata/posts/2014-10-17-euler-paths/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.254Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/posts/2019-12-10-tidy-tuesday-replicating-plots-in-r/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.258Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/posts/2014-06-06-processing-graph-streams/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.231Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/posts/2021-05-11-tidy-tuesday-internet-access/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.273Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/posts/2014-07-18-a-chromatic-number-program/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.240Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/posts/2014-05-23-introduction-to-greedy-colouring/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.229Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/posts/2014-06-13-greedy-vertex-colouring/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.233Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/posts/2014-08-15-colouring-small-regular-graphs/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.244Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/posts/2023-05-09-tidy-tuesday-childcare-costs/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.280Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/posts/2021-11-04-extracting-text-from-images-with-google-vision-api-and-r/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.279Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/posts/2014-05-02-basic-graph-drawing/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.225Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/posts/2014-08-08-colouring-small-graphs-update/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.243Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/posts/2014-09-26-greedy-edge-colouring-of-small-graphs/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.253Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/posts/2014-08-29-chromatic-indices-of-small-graphs/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.245Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.220Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/posts/2014-06-20-strategies-for-greedy-vertex-colouring/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.235Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/posts/2014-07-04-vertex-colouring-by-recursive-removal-of-independent-sets-of-vertices/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.238Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/posts/2014-08-22-small-moore-graphs/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.245Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/posts/2014-04-25-plane-drawings-of-lobsters/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.221Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/posts/2014-05-30-drawing-coloured-queen-graphs/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.231Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/posts/2014-05-09-lombardi-drawings/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.225Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/posts/2014-06-27-improved-greedy-colouring-of-small-graphs/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.237Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/posts/2023-05-04-generating-examples-of-maximal-room-squares-in-r/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.280Z</lastmod>
-  </url>
-  <url>
     <loc>https://MHenderson.github.io/mjhdata/posts/2021-05-05-tidy-tuesday-water-sources/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.262Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/posts/2014-09-12-more-on-moore-graphs/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.246Z</lastmod>
+    <lastmod>2025-05-16T08:00:47.694Z</lastmod>
   </url>
   <url>
     <loc>https://MHenderson.github.io/mjhdata/posts/2019-12-17-tidy-tuesday-adoptable-dogs/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.259Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MHenderson.github.io/mjhdata/posts/2014-07-11-chromatic-polynomials/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.239Z</lastmod>
+    <lastmod>2025-05-16T08:00:47.691Z</lastmod>
   </url>
   <url>
     <loc>https://MHenderson.github.io/mjhdata/posts/2023-05-16-tidy-tuesday-tornadoes/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.287Z</lastmod>
+    <lastmod>2025-05-16T08:00:47.721Z</lastmod>
   </url>
   <url>
-    <loc>https://MHenderson.github.io/mjhdata/posts/2014-07-25-colouring-small-graphs/index.html</loc>
-    <lastmod>2025-04-01T18:25:32.242Z</lastmod>
+    <loc>https://MHenderson.github.io/mjhdata/posts/2023-05-09-tidy-tuesday-childcare-costs/index.html</loc>
+    <lastmod>2025-05-16T08:00:47.714Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MHenderson.github.io/mjhdata/index.html</loc>
+    <lastmod>2025-05-16T08:00:47.685Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MHenderson.github.io/mjhdata/posts/2021-11-04-extracting-text-from-images-with-google-vision-api-and-r/index.html</loc>
+    <lastmod>2025-05-16T08:00:47.714Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MHenderson.github.io/mjhdata/posts/2021-05-11-tidy-tuesday-internet-access/index.html</loc>
+    <lastmod>2025-05-16T08:00:47.708Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MHenderson.github.io/mjhdata/posts/2019-12-10-tidy-tuesday-replicating-plots-in-r/index.html</loc>
+    <lastmod>2025-05-16T08:00:47.689Z</lastmod>
   </url>
 </urlset>
