@@ -1,8 +1,8 @@
-   43   189  1419 posts/2019-12-10-tidy-tuesday-replicating-plots-in-r/index.qmd
+   27   128  1125 posts/2019-12-10-tidy-tuesday-replicating-plots-in-r/index.qmd
   122   297  2228 posts/2019-12-17-tidy-tuesday-adoptable-dogs/index.qmd
    38   106   916 posts/2021-05-05-tidy-tuesday-water-sources/index.qmd
   138   409  3005 posts/2021-05-11-tidy-tuesday-internet-access/index.qmd
  1173  4329 28467 posts/2021-11-04-extracting-text-from-images-with-google-vision-api-and-r/index.qmd
    29   234  1535 posts/2023-05-09-tidy-tuesday-childcare-costs/index.qmd
    50   541  3346 posts/2023-05-16-tidy-tuesday-tornadoes/index.qmd
- 1593  6105 40916 total
+ 1577  6044 40622 total
